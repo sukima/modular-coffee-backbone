@@ -1,9 +1,9 @@
 Modular Backbone Project Template
 =================================
 
-Project's goal is to provide a minimalistic structure of the Backbone application using RequireJS and up-to-date dependencies.
+Project's goal is to provide a minimalistic structure of the Backbone application using RequireJS and CoffeeScript.
 
-This project is based on the work of Thomas Davis and his
+This project is based on dzejkej's [modular-backbone](https://github.com/dzejkej/modular-backbone/) and the work of Thomas Davis and his
 [Organizing your application using Modules (require.js)](http://backbonetutorials.com/organizing-backbone-using-modules/) tutorial.
 
 ###Included Libraries
@@ -14,10 +14,11 @@ This project is based on the work of Thomas Davis and his
 * [Backbone 0.9.2](http://documentcloud.github.com/backbone/) in the form of [amdjs branch](https://github.com/amdjs/backbone)
 * [json2.js](https://github.com/douglascrockford/JSON-js)
 
-###Using RequireJS Optimizer
+###Using Cake
 
-A sample build file for [RequireJS Optimizer](http://requirejs.org/docs/optimization.html) is included in
-[js/app.build.js](https://github.com/dzejkej/modular-backbone/blob/master/js/app.build.js). All configuration options are available [here](https://github.com/jrburke/r.js/blob/master/build/example.build.js).
+A `Cakefile` for CoffeScript will build all .coffee files and uses [RequireJS Optimizer](http://requirejs.org/docs/optimization.html)
+to place the finished product into the `build` directory. Configuration is at the top of the `Cakefile`.
+All configuration options are available [here](https://github.com/jrburke/r.js/blob/master/build/example.build.js).
 
 ---
 
