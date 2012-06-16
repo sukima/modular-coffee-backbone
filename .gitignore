@@ -1,5 +1,6 @@
 build
 build.log
+src/js/*.js
 src/js/collections/*.js
 src/js/models/*.js
 src/js/views/*.js

@@ -64,9 +64,14 @@ task "watch", "Watch the src for changes and rebuild", (opts) ->
 
 task "clean", "Clean the src of generated files", (opts) ->
   for dir in clean_dirs
-    console.log "Cleaning #{config.appDir}/#{dir}"
+    count = 0
     files = fs.readdirSync "#{config.appDir}/#{dir}"
     for file in files
       file = "#{config.appDir}/#{dir}/#{file}"
       stat = fs.statSync file
-      fs.unlink file if stat.isFile() and file.match /\.js$/
+      if stat.isFile() and file.match /\.js$/
+        count++
+        fs.unlink file
+    o = "Cleaned #{config.appDir}/#{dir}"
+    o += " (#{count} file#{if count > 1 then 's' else ''})" if count > 0
+    console.log o
